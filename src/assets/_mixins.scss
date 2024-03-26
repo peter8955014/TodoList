@@ -1,0 +1,73 @@
+// all mixin tools
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin elementCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  border-radius: 1rem;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    scale: 1.1;
+  }
+
+  &:active,
+  &:focus {
+    transform: translateY(1px);
+    box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+  }
+}
+
+@mixin backImage($imgUrl, $col-1, $col-2) {
+  background-image: linear-gradient(to right bottom,
+      rgba($col-1, 0.8),
+      rgba($col-2, 0.8)), url($imgUrl);
+  background-size: cover;
+}
+
+@mixin backLiner($col-1, $col-2) {
+  background-image: linear-gradient(to right bottom,
+      rgba($col-1, 0.8),
+      rgba($col-2, 0.8));
+  background-size: cover;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==phone {
+    @media only screen and (max-width:37.5rem) {
+      @content
+    }
+  };
+
+  @if $breakpoint ==tab-port {
+    @media only screen and (max-width:37.5rem) {
+      @content
+    }
+  };
+
+  @if $breakpoint ==tab-land {
+    @media only screen and (max-width:37.5rem) {
+      @content
+    }
+  };
+
+  @if $breakpoint ==bit-desktop {
+    @media only screen and (max-width:37.5rem) {
+      @content
+    }
+  };
+}

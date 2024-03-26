@@ -1,0 +1,51 @@
+.header {
+  height: 95vh;
+  @include backImage('../img/background.jpg',
+  $color-primary-light, $color-primary-dark );
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+  border-top: 1rem solid $color-grey-dark-2;
+
+  &_text-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &_text-button {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+  }
+
+
+  .heading-primary {
+    color: $color-grey-dark-3;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    text-shadow: 0 0.5rem 1rem;
+    width: 85vw;
+
+    &_main {
+      display: block;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3rem;
+      animation: moveInBottom 0.5s ease-out;
+    }
+
+    &_sub {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5rem;
+      animation: moveInBottom .5s ease-out;
+    }
+  }
+}

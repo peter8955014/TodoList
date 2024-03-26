@@ -1,0 +1,83 @@
+.modal {
+  padding: 2rem;
+  position: fixed;
+  top: -20vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: 50rem;
+  max-height: 80vh;
+  background: #e2e5eb;
+  border: none;
+  border-radius: 6px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: slide-down-fade-in 300ms ease-out forwards;
+
+  &::backdrop {
+    // @include backImage('../img//todo-background.jpg',
+    //   $color-primary-light, $color-primary-dark );
+    backdrop-filter: blur(.5rem);
+    position: fixed;
+  }
+}
+
+.todoItem-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  width: 50%;
+  margin: 10% auto;
+  padding: 2rem;
+  @include card;
+  letter-spacing: .25rem;
+
+  &_btn {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    a,
+    button {
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font: inherit;
+      cursor: pointer;
+      color: $color-grey-dark-3;
+
+      &:hover {
+        color: $color-danger;
+      }
+    }
+  }
+
+
+  p {
+    overflow: auto;
+    /* 当内容溢出时显示滚动条 */
+    word-wrap: break-word;
+    /* 长单词强制换行 */
+    height: 10rem;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
+  }
+}
+
+.detail-list {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+  padding: 2rem 0; /* 设置内边距 */
+}

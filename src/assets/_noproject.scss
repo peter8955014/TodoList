@@ -1,0 +1,20 @@
+
+.noproject-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  justify-content: center;
+
+  .title{
+    font-size: 5rem;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+  }
+
+  .content{
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    margin-bottom: 5rem;
+  }
+}

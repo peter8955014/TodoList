@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+
+  &_list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+  }
+
+  &_link {
+    color: $color-primary-dark;
+
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+      padding: .5rem 1rem;
+      text-transform: uppercase;
+    }
+    
+    @include card
+  }
+
+}

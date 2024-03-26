@@ -1,0 +1,155 @@
+.todolist {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  @include backImage('../img//todo-background.jpg',
+    $color-primary-light, $color-primary-dark );
+  height: 92vh;
+
+  &_nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+
+    .logo-box {
+      height: 6rem;
+      margin-left: 1rem;
+      cursor: pointer;
+
+      .logo {
+        width: 5rem;
+        height: 5rem;
+        @include card;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &_content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.todo-box {
+  width: 80%;
+
+  &_ul {
+    margin-top: 5rem;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include backLiner($color-grey-light-2, $color-primary-dark);
+    @include card;
+    height: 5rem;
+    list-style: none;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
+  }
+
+  &_content {
+    width: 90%;
+
+    &_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-grey-dark-3;
+    }
+  }
+
+  &_deleteIcon {
+    .deIcon {
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+
+      &:hover {
+        scale: 1.4;
+      }
+    }
+  }
+
+  #event-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: #3c4249;
+    text-transform: uppercase;
+  }
+
+  #event-form input,
+  #event-form textarea {
+    font: inherit;
+    font-size: 1.1rem;
+    padding: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+}
+
+.checkbox-wrapper-23 {
+
+  &,
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input:checked+label svg path {
+    stroke-dashoffset: 0;
+  }
+
+  input:focus+label {
+    transform: scale(1.03);
+  }
+
+  input+label {
+    display: block;
+    border: 2px solid #333;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s ease;
+
+    &:active {
+      transform: scale(1.05);
+      border-radius: 12px;
+    }
+
+    svg {
+      pointer-events: none;
+      padding: 5%;
+
+      path{
+        fill: none;
+        stroke: #333;
+        stroke-width: 4px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 101;
+        transition: all 250ms cubic-bezier(1, 0, .37, .91);
+      }
+    }
+  }
+}
