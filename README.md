@@ -1,4 +1,4 @@
 # 👉👉 [TodoList](https://peter8955014.github.io/TodoList/)
 
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![project-2](https://github.com/peter8955014/TodoList/assets/132184619/504e5ca2-6e32-4ab2-8e63-8f3635be3595)
