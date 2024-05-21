@@ -1,4 +1,4 @@
-# 👉👉 [TodoList](https://peter8955014.github.io/TodoList/)
+## 簡易版的 todo   網站👉👉  [TodoList](https://peter8955014.github.io/TodoList/) 
 
 - 進入前的 Hero 頁面切版
 ![project-2](https://github.com/peter8955014/TodoList/assets/132184619/504e5ca2-6e32-4ab2-8e63-8f3635be3595)
